@@ -1,0 +1,65 @@
+{
+  "name": "@avenbreaks/resonance-sdk",
+  "version": "0.1.1",
+  "description": "Resonance Network SDK for TypeScript/JavaScript - Official SDK for interacting with Resonance FPoS blockchain",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run type-check"
+  },
+  "dependencies": {
+    "ethers": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "resonance",
+    "blockchain",
+    "ethereum",
+    "staking",
+    "sdk",
+    "poa",
+    "proof-of-authority",
+    "web3",
+    "validator",
+    "delegator",
+    "typescript"
+  ],
+  "author": "avenbreaks",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avenbreaks/resonance-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/avenbreaks/resonance-sdk/issues"
+  },
+  "homepage": "https://github.com/avenbreaks/resonance-sdk#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,26 @@
+# Source files
+src/
+tests/
+examples/
+scripts/
+
+# Config files
+tsconfig.json
+.eslintrc*
+.prettierrc*
+
+# Development files
+*.log
+*.tsbuildinfo
+node_modules/
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Documentation (keep only README.md)
+SDK_SUMMARY.md
+
+# Build artifacts (will be included via package.json "files")
+# dist/ is included automatically
